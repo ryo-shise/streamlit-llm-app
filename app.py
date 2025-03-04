@@ -6,6 +6,9 @@ from langchain.schema import SystemMessage, HumanMessage
 
 load_dotenv()
 
+# Streamlit Secrets から OpenAI APIキーを取得
+api_key = st.secrets["openai"]["OPENAI_API_KEY"]
+
 # OpenAI APIキーを設定
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
